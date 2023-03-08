@@ -1,5 +1,5 @@
 # README
 
-1. start your Rails server with `rails s`
+1. Start your Rails server with `rails s`
 
-2. visit the url `http://localhost:3000/passwords/generate`
+2. Visit the url `http://localhost:3000/passwords/generate`
