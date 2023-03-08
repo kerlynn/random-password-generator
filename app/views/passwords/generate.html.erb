@@ -1,0 +1,13 @@
+<h1>Password Generator</h1>
+
+<%= form_for "/passwords/generate", method: :get do %>
+ <%= text_field_tag :length, 7, placeholder: 'Enter password length...' %>
+  <%= button_tag "Submit", type: "submit"%>
+<% end %>
+
+
+<% if @password %>
+  <p>
+    New password: <%= @password %>
+  </p>
+<% end %>
