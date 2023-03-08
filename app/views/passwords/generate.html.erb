@@ -1,13 +1,24 @@
 <h1>Password Generator</h1>
-
 <%= form_for "/passwords/generate", method: :get do %>
- <%= text_field_tag :length, 7, placeholder: 'Enter password length...' %>
-  <%= button_tag "Submit", type: "submit"%>
-<% end %>
-
-
-<% if @password %>
-  <p>
-    New password: <%= @password %>
-  </p>
-<% end %>
+  <div class="card">
+    <div class="card-body">
+      <div class="mb-3">
+        Enter password length: <%= text_field_tag :length, 7, placeholder: 'Enter password length...' %>
+      </div>
+      <div class="mb-3">
+        <%= check_box_tag 'uppercase', 'uppercase' %> without uppercase
+        <%= check_box_tag 'lowercase', 'lowercase' %>without lowercase
+      </div>
+      <div class="mb-3">
+        <%= check_box_tag 'number', 'number' %>without number
+        <%= check_box_tag 'special_char', 'special_char' %> without special_char
+      </div>
+      <div class="mb-3">
+        <%= button_tag "Submit", type: "submit"%>
+      </div>
+    <% end %>
+    <% if @password %>
+      <p>
+        New password: <%= @password %>
+      </p>
+    <% end %>
